@@ -18,6 +18,7 @@ int FindRepresentative(int u){
     if(parent[u]==u)
         return u;
         return parent[u]=FindRepresentative(parent[u]);//with path compression
+        //return FindRepresentative(parent[u]); //without path compression
 }
 void Union(int a,int b){
  int u=FindRepresentative(a);
@@ -52,8 +53,6 @@ int main()
                     //    3         5
                     //               \
                     //                6           
-    
-                    
     
     
     cout<<FindRepresentative(5)<<endl;
